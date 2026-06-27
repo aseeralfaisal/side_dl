@@ -1,2 +1,2 @@
 # side_dl
-A tauri+python based downloader 
+Desktop download manager built with Tauri, React, and a Flask sidecar
