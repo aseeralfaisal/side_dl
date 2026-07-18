@@ -1,0 +1,11 @@
+import os
+from pathlib import Path
+
+DOWNLOAD_DIR = Path.home() / "Downloads" / "side_dl"
+ARIA2_RPC_HOST = "127.0.0.1"
+ARIA2_RPC_PORT = 6800
+ARIA2_RPC_URL = f"http://{ARIA2_RPC_HOST}:{ARIA2_RPC_PORT}/jsonrpc"
+ARIA2_MAX_CONCURRENT = 5
+ARIA2_MAX_CONNECTION_PER_SERVER = 4
+ARIA2_SPLIT = 4
+POLL_INTERVAL = 1.5

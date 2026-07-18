@@ -27,14 +27,12 @@ fn start_flask(sidecar: &FlaskSidecar) {
                 .and_then(|p| p.parent().map(|d| d.join("backend")))
         });
 
-    let entry = backend_dir
-        .as_ref()
-        .map(|d| d.join("app").join("__init__.py"));
-
-    if let Some(path) = entry {
-        if path.exists() {
+    if let Some(ref dir) = backend_dir {
+        if dir.exists() {
             let child = Command::new("python3")
-                .arg(&path)
+                .arg("-m")
+                .arg("app")
+                .current_dir(dir)
                 .env("FLASK_RUN_PORT", "5000")
                 .env("FLASK_RUN_HOST", "127.0.0.1")
                 .spawn();
