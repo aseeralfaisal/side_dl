@@ -1,5 +1,7 @@
 # side_dl
 
+<img width="1920" height="1280" alt="image" src="https://github.com/user-attachments/assets/ddcb13b9-b09c-464b-82cd-7230607326e9" />
+
 A terminal-inspired desktop download manager built with **Tauri v2**, **React**, and a **Python Flask sidecar**.
 
 ## Features
